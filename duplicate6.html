@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove duplicate item form array</title>
+</head>
+
+<body>
+    <script>
+        function removeDuplicates(num) {
+            var i,
+                len = num.length,
+                out = [],
+                obj = {};
+
+            for (i = 0; i < len; i++) {
+                obj[num[i]] = 0;
+            }
+            for (i in obj) {
+                out.push(i);
+            }
+            return out;
+        }
+        var arry = [1, 2, 2, 4, 5, 4, 7, 8, 7, 3, 6];
+        result = removeDuplicates(arry);
+        console.log(arry);
+        console.log(result);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Most frequent item in array</title>
+</head>
+
+<body>
+    <script>
+        var a = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+        var fi = 1;
+        var ni= 0;
+        var item;
+        for (var i = 0; i < a.length; i++) {
+            for (var j = i; j < a.length; j++) {
+                if (a[i] == a[j])
+                    ni++;
+                if (fi < ni) {
+                    fi = ni;
+                    item = a[i];
+                }
+            }
+            ni = 0;
+        }
+        document.write(item + " ( " + fi + " times ) ");
+    </script>
+</body>
+
+</html>

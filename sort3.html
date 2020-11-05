@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sort thr items of array</title>
+</head>
+
+<body>
+        <script>
+                var ele1 = [-3, 8, 7, 6, 5, -4, 3, 2, 1];
+                var ele2 = [];
+                var min = ele1[0];
+                var pos;
+                var max = ele1[0];
+                for (i = 0; i < ele1.length; i++) {
+                        if (max < ele1[i]) max = ele1[i];
+                }
+
+                for (var i = 0; i < ele1.length; i++) {
+                        for (var j = 0; j < ele1.length; j++) {
+                                if (ele1[j] != "x") {
+                                        if (min > ele1[j]) {
+                                                min = ele1[j];
+                                                pos = j;
+                                        }
+                                }
+                        }
+                        ele2[i] = min;
+                        ele1[pos] = "x";
+                        min = max;
+                }
+                document.write(ele2);
+
+        </script>
+</body>
+
+</html>
